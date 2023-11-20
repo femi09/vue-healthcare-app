@@ -1,5 +1,12 @@
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
+import router from './router'
+// import PatientMedicalRecords from '../views/MedicalRecords/View.vue'
+import PatientMedicalRecords from '../src/views/MedicalRecords/View.vue'
+import './assets/main.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+
+app.use(router)
+app.component('PatientMedicalRecords', PatientMedicalRecords)
+app.mount('#app')
